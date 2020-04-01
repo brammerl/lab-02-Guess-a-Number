@@ -1,4 +1,3 @@
-
 function compareNumbers(guess, correctNumber) {
     if (guess === correctNumber) {
         return 0;
@@ -7,6 +6,14 @@ function compareNumbers(guess, correctNumber) {
     } else if (guess > correctNumber) {
         return 1;
     }
+
+    try {
+        if (isNaN(guess)) throw 'Error!';   
+    }
+    catch (err) {
+        document.getElementById('errorMessage').textContent = err; 
+    }
 }
+
 
 export default compareNumbers; 

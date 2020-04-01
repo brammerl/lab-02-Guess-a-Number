@@ -18,6 +18,7 @@ mybutton.addEventListener('click', () => {
     
     if (numCompared === 1) {
         highLowText.textContent = `High`;
+        mybutton.
     } else if (numCompared === -1) {
         highLowText.textContent = `Low`;
         
