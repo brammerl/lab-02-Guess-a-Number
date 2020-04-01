@@ -17,12 +17,9 @@ test('testing that returns are 0, 1 and -1', function(assert) {
 
     
 
-    // if the guess and correctNumber are identical, return 0
-    // if the guess is lower, return -1
-    // if the guess is higher, return 1
+  
     
     assert.equal(answer, 1);
     assert.equal(answer2, -1);
     assert.equal(answer3, 0);
-    assert.equal(answer4, );
 });
