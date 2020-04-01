@@ -15,10 +15,6 @@ test('testing that returns are 0, 1 and -1', function(assert) {
     const answer3 = compareNumbers(guess3, number);
    
 
-    
-
-  
-    
     assert.equal(answer, 1);
     assert.equal(answer2, -1);
     assert.equal(answer3, 0);
