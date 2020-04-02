@@ -1,11 +1,12 @@
 import compareNumbers from './compareNumbers.js';
+import { displayHigh, displayLow, youWin, youLose } from './functions.js';
+
 const correctNumber = Math.ceil(Math.random() * 10);
 
 const numInput = document.getElementById('inputBox');
-
-const triesLeftText = document.getElementById('triesLeft');
 const highLowText = document.getElementById('tooHighLow');
-const winLoseText = document.getElementById('winLose');
+const triesLeftText = document.getElementById('triesLeft');
+
 const mybutton = document.getElementById('submitButton');
 
 let triesRemaining = 3;
@@ -15,19 +16,23 @@ mybutton.addEventListener('click', () => {
     triesLeftText.textContent = tries;
     const guess = Number(numInput.value); 
     const numCompared = compareNumbers(guess, correctNumber);
+    console.log(correctNumber);
     
     if (numCompared === 1) {
-        highLowText.textContent = `High`;
+        displayHigh();
         
     } else if (numCompared === -1) {
-        highLowText.textContent = `Low`;
-        
+        displayLow();
+          
     } else if (numCompared === 0) {
-        winLoseText.textContent = `You've won!`;
+        youWin();
+        mybutton.disabled = true;
+        triesLeftText.style.visibility = 'hidden';
+        highLowText.style.visibility = 'hidden';
     } 
     
-    if (tries === 0) {
-        winLoseText.textContent = `Sorry! You've lost!`;
+    if (tries <= 0 && numCompared !== 0) {
+        youLose();
+        mybutton.disabled = true;
     }
-
 });
