@@ -1,0 +1,26 @@
+* {
+    text-align: center;
+}
+
+header {
+    padding: 5%;
+    background: grey;
+    font-size: 2em;
+    
+}
+
+#instructions {
+    font-size: 3em;
+}
+
+input {
+    padding: 12px;
+    margin: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+#instructions {
+    margin-top: 10%;
+}
+
